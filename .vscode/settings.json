@@ -1,3 +1,8 @@
 {
-    "editor.rulers": [70]
+    "editor.rulers": [
+        70
+    ],
+    "files.associations": {
+        "page.h": "c"
+    }
 }
