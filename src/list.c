@@ -44,7 +44,7 @@ void list_destroy(List *list)
    return;
 }
 
-int8_t list_ins_next(List *list, ListElmt *element, const void *data)
+int list_ins_next(List *list, ListElmt *element, const void *data)
 {
    ListElmt *new_element;
 
@@ -81,7 +81,7 @@ int8_t list_ins_next(List *list, ListElmt *element, const void *data)
    return 0;
 }
 
-int8_t list_rem_next(List *list, ListElmt *element, void **data)
+int list_rem_next(List *list, ListElmt *element, void **data)
 {
    ListElmt *old_element;
 

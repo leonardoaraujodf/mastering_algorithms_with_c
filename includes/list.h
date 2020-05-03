@@ -18,9 +18,9 @@ typedef struct ListElmt_
 
 typedef struct List_
 {
-   uint32_t size;
+   int size;
 
-   int8_t (*match)(const void *key1, const void *key2);
+   int (*match)(const void *key1, const void *key2);
    void (*destroy)(void *data);
 
    ListElmt *head;
@@ -82,7 +82,7 @@ void list_destroy(List *list);
  * Complexity: O(1)
  *
  */
-int8_t list_ins_next(List *list, ListElmt *element, const void *data);
+int list_ins_next(List *list, ListElmt *element, const void *data);
 
 /*
  * Description: Removes the element just after element from the
@@ -98,7 +98,7 @@ int8_t list_ins_next(List *list, ListElmt *element, const void *data);
  * Complexity: O(1)
  *
  */
-int8_t list_rem_next(List *list, ListElmt *element, void **data);
+int list_rem_next(List *list, ListElmt *element, void **data);
 
 /*
  * Description: Macro that evaluates to the number of elements in the
