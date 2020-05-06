@@ -48,7 +48,7 @@ int set_remove(Set *set, void **data)
     return list_rem_next(set, prev, data);
 }
 
-int set_union(Set *setu,const Set *set1, const Set *set2)
+int set_union(Set *setu, const Set *set1, const Set *set2)
 {
     ListElmt *member;
     void *data;
@@ -92,7 +92,7 @@ int set_union(Set *setu,const Set *set1, const Set *set2)
     return 0;
 }
 
-int set_intersection(Set *seti, Set *set1, Set *set2)
+int set_intersection(Set *seti, const Set *set1, const Set *set2)
 {
     ListElmt *member;
     void *data;
@@ -118,7 +118,7 @@ int set_intersection(Set *seti, Set *set1, Set *set2)
     return 0;
 }
 
-int set_difference(Set *setd, Set *set1, Set *set2)
+int set_difference(Set *setd, const Set *set1, const Set *set2)
 {
     ListElmt *member;
     void *data;
