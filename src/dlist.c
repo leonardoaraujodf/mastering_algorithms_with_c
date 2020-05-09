@@ -1,4 +1,9 @@
-/* Implementation of the Doubly-Linked List Abstract Datatype */
+/**
+ * @file dlist.c
+ * @author Kyle Loudon
+ * @date 8 May 2020
+ * @brief Implementation of the Doubly-Linked List Abstract Datatype
+ */
 
 #include <stdlib.h>
 #include <string.h>
