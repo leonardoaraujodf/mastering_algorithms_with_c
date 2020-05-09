@@ -1,4 +1,9 @@
-/* Implementation of the Linked List Abstract Datatype */
+/**
+ * @file list.c
+ * @author Kyle Loudon
+ * @date 8 May 2020
+ * @brief Implementation of the Linked List Abstract Datatype
+ */
 
 #include <stdlib.h>
 #include <string.h>
