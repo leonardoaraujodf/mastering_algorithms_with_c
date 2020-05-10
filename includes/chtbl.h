@@ -28,7 +28,7 @@ typedef struct CHTbl_ {
     List *table; /*!< The array of buckets */
 } CHTbl;
 
-/* --------------------- Public Interface ------------------------ */
+/* ------------------------------------- Public Interface --------------------------------------- */
 
 /**
  * @brief Initializes the chained hash table specified by htbl.
@@ -93,9 +93,10 @@ int chtbl_insert(CHTbl *htbl, const void *data);
  * Upon return, data points to the data stored in the element that was removed. It is the
  * responsibility of the caller to manage the storage associated with the data.
  * 
- * @param[in, out] htbl Chained hash table to remove the element
- * @param[in] data Data that is to be removed from htbl
- * @return 0 if removing the element is succesful, or -1 otherwise
+ * @param[in, out] htbl Chained hash table to remove the element.
+ * @param[in] data Data that is to be removed from htbl.
+ * @return 0 if removing the element is succesful, 1 if the element is already in the hash table,
+ * or -1 otherwise.
  *  
  */
 int chtbl_remove(CHTbl *htbl, void **data);
