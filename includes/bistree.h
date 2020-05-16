@@ -51,7 +51,7 @@ typedef BiTree BisTree;
  * @return None.
  * 
  */
-void bistree_init(BisTree *tree, void (*compare)(const void *key1, const void *key2),
+void bistree_init(BisTree *tree, int (*compare)(const void *key1, const void *key2),
                   void (*destroy)(void *data));
 
 /**
