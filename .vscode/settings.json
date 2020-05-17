@@ -3,6 +3,7 @@
         100
     ],
     "files.associations": {
-        "page.h": "c"
+        "page.h": "c",
+        "bistree.h": "c"
     }
 }
