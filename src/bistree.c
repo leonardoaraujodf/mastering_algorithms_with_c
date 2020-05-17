@@ -10,6 +10,8 @@
 
 #include "bistree.h"
 
+static void _destroy_right(BisTree *tree, BiTreeNode *node);
+
 static void _rotate_left(BiTreeNode **node)
 {
     BiTreeNode *left, *grandchild;
@@ -50,6 +52,7 @@ static void _rotate_left(BiTreeNode **node)
 
                 ((AvlNode *)bitree_data(*node))->factor = AVL_BALANCED;
                 ((AvlNode *)bitree_data(left))->factor = AVL_BALANCED;
+                break;
 
             case AVL_RGT_HEAVY:
 
@@ -382,7 +385,7 @@ static int _hide(BisTree *tree, BiTreeNode *node, const void *data)
         retval = 0;
     }
 
-    retval = 0;
+    return retval;
 }
 
 static int _lookup(BisTree *tree, BiTreeNode *node, void **data)
