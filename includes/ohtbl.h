@@ -71,7 +71,7 @@ int ohtbl_init(OHTbl *htbl, int positions, int (*h1)(const void *key), int (*h2)
  * @return None.
  * 
  */
-int ohtbl_destroy(OHTbl *htbl);
+void ohtbl_destroy(OHTbl *htbl);
 
 /**
  * @brief Inserts an element into the open-addressed hash table specified by htbl.

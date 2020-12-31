@@ -1,9 +1,0 @@
-{
-    "editor.rulers": [
-        100
-    ],
-    "files.associations": {
-        "page.h": "c",
-        "bistree.h": "c"
-    }
-}

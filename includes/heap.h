@@ -15,7 +15,7 @@
 typedef struct Heap_ {
     int size;
     int (*compare)(const void *key1, const void *key2);
-    int (*destroy)(void *data);
+    void (*destroy)(void *data);
 
     void **tree;
 } Heap;

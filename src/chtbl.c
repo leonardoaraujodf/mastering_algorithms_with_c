@@ -51,7 +51,7 @@ void chtbl_destroy(CHTbl *htbl)
     free(htbl->table);
 
     /* No operations are allowed now, but clear the structure as a precaution. */
-    memset(htbl, 0, sizeof(htbl));
+    memset(htbl, 0, sizeof(CHTbl));
 
     return;
 }
@@ -107,6 +107,9 @@ int chtbl_remove(CHTbl *htbl, void **data)
 
         prev = element;
     }
+
+    /* Return that the data was not found. */
+    return -1;
 }
 
 int chtbl_lookup(const CHTbl *htbl, void **data)

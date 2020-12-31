@@ -67,7 +67,7 @@ void ohtbl_destroy(OHTbl *htbl)
     return;
 }
 
-void ohtbl_insert(OHTbl *htbl, const void *data)
+int ohtbl_insert(OHTbl *htbl, const void *data)
 {
     void *temp;
     int position, i;
@@ -100,7 +100,7 @@ void ohtbl_insert(OHTbl *htbl, const void *data)
     return -1;
 }
 
-int ohtbl_remove(OHTbl *htbl, void **data)
+int ohtbl_remove(OHTbl *htbl, const void **data)
 {
     int position, i;
 

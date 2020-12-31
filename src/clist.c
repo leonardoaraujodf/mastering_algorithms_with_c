@@ -22,8 +22,8 @@ void clist_destroy(CList *list)
     /* Remove each element. */
     while (clist_size(list) > 0)
     {
-        if(clist_rem_next(list, list->head, (void **)&data) == 0 &&
-            list->destroy != NULL)
+        if((clist_rem_next(list, list->head, (void **)&data) == 0) &&
+            (list->destroy != NULL))
         {
             /* 
              * Call a user-defined function to free dynamically

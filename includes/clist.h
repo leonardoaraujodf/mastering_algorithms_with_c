@@ -85,8 +85,7 @@ int clist_ins_next(CList *list, CListElmt *element, const void *data);
  * Complexity: O(1)
  * 
  */
-int clist_rem_next(CList *list, CListElmt *element,
-    const void **data);
+int clist_rem_next(CList *list, CListElmt *element, void **data);
 
 /*
  * Description: Macro that evaluates to the number of elements in the
