@@ -14,7 +14,7 @@ SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 # The Target Build
 all: $(TARGET) $(SO_TARGET)
 
-dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
+dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra -I$(INCLUDES) $(OPTFLAGS)
 dev: all
 
 $(TARGET): CFLAGS += -fPIC
@@ -31,6 +31,6 @@ build:
 
 # The Cleaner
 clean:
-	rm -rf build $(OBJECTS) $(TESTS)
+	rm -rf build bin $(OBJECTS) $(TESTS)
 	find . -name "*.gc*" -exec rm {} \;
 	rm -rf `find . -name "*.dSYM" -print`
