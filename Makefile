@@ -2,11 +2,28 @@ CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic $(OPTFLAGS)
 LIBS=-ldl $(OPTLIBS)
 PREFIX?=/usr/local
 
-SOURCES=$(wildcard src/**/*.c src/*.c)
-OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
-INCLUDES=includes/
+SOURCES_DIR=src
+INCLUDES_DIR=includes
 
-CFLAGS+=-I$(INCLUDES)
+# Data structures
+SOURCES+=$(SOURCES_DIR)/bistree.c
+SOURCES+=$(SOURCES_DIR)/bitree.c
+SOURCES+=$(SOURCES_DIR)/chtbl.c
+SOURCES+=$(SOURCES_DIR)/clist.c
+SOURCES+=$(SOURCES_DIR)/dlist.c
+SOURCES+=$(SOURCES_DIR)/graph.c
+SOURCES+=$(SOURCES_DIR)/heap.c
+SOURCES+=$(SOURCES_DIR)/list.c
+SOURCES+=$(SOURCES_DIR)/ohtbl.c
+SOURCES+=$(SOURCES_DIR)/set.c
+SOURCES+=$(SOURCES_DIR)/stack.c
+
+#Algorithms
+SOURCES+=$(SOURCES_DIR)/issort.c
+
+OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
+
+CFLAGS+=-I$(INCLUDES_DIR)
 
 TARGET=build/libds.a
 SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
@@ -14,7 +31,7 @@ SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 # The Target Build
 all: $(TARGET) $(SO_TARGET)
 
-dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra -I$(INCLUDES) $(OPTFLAGS)
+dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra -I$(INCLUDES_DIR) $(OPTFLAGS)
 dev: all
 
 $(TARGET): CFLAGS += -fPIC
