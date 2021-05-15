@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "issort.h"
-#include "qksort.h"
+#include "sort.h"
 
 /*
  * @brief Compare two integers. Used during median-of-three partitioning.
