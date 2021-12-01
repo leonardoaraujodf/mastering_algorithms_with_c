@@ -48,7 +48,8 @@ int directls(const char *path, Directory **dir)
    }
    closedir(dirptr);
 
-   if (qksort(*dir, count, sizeof(Directory), 0, count - 1, compare_dir) != 0)
+   // if (qksort(*dir, count, sizeof(Directory), 0, count - 1, compare_dir) != 0)
+   if (mgsort(*dir, count, sizeof(Directory), 0, count - 1, compare_dir) != 0)
       return -1;
 
    /* Return the number of directory entries. */
