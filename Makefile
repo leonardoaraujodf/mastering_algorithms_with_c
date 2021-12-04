@@ -24,6 +24,7 @@ SOURCES+=$(SOURCES_DIR)/qksort.c
 SOURCES+=$(SOURCES_DIR)/mgsort.c
 SOURCES+=$(SOURCES_DIR)/ctsort.c
 SOURCES+=$(SOURCES_DIR)/rxsort.c
+SOURCES+=$(SOURCES_DIR)/bisearch.c
 
 OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
 
