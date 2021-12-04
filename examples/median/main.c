@@ -4,7 +4,7 @@
 
 #include "median.h"
 
-#define ARRAY_SIZE (10000)
+#define ARRAY_SIZE (10)
 #define MAX_VALUE (250)
 
 int main()

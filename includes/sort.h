@@ -73,4 +73,17 @@ int mgsort(void *data, int size, int esize, int i, int k, int (*compare)(const v
  */
 int ctsort(int * data, int size, int k);
 
+
+/*
+ * @brief Uses radix sort to sort the array of int elements in data.
+ * Complexity: O(pn + pk), where n is the number of integers to be sorted, k is the radix, and p is
+ * the number of digit positions.
+ *
+ * @param[in] data The data to be sorted. When rxsort returns, data contains the sorted integers.
+ * @param[in] size The number of elements in data.
+ * @param[in] p The number of digital positions in each integer.
+ * @param[in] k The radix to be used.
+ */
+int rxsort(int *data, int size, int p, int k);
+
 #endif

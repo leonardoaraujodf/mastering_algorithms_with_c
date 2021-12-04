@@ -1,5 +1,5 @@
 CFLAGS=-g -O0 -Wall -Wextra -Isrc -rdynamic $(OPTFLAGS)
-LIBS=-ldl $(OPTLIBS)
+LIBS=-ldl -lm $(OPTLIBS)
 PREFIX?=/usr/local
 
 SOURCES_DIR=src
@@ -17,12 +17,13 @@ SOURCES+=$(SOURCES_DIR)/list.c
 SOURCES+=$(SOURCES_DIR)/ohtbl.c
 SOURCES+=$(SOURCES_DIR)/set.c
 SOURCES+=$(SOURCES_DIR)/stack.c
-SOURCES+=$(SOURCES_DIR)/mgsort.c
-SOURCES+=$(SOURCES_DIR)/ctsort.c
 
 # Algorithms
 SOURCES+=$(SOURCES_DIR)/issort.c
 SOURCES+=$(SOURCES_DIR)/qksort.c
+SOURCES+=$(SOURCES_DIR)/mgsort.c
+SOURCES+=$(SOURCES_DIR)/ctsort.c
+SOURCES+=$(SOURCES_DIR)/rxsort.c
 
 OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
 
