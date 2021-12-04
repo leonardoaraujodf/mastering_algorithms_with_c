@@ -18,6 +18,7 @@ SOURCES+=$(SOURCES_DIR)/ohtbl.c
 SOURCES+=$(SOURCES_DIR)/set.c
 SOURCES+=$(SOURCES_DIR)/stack.c
 SOURCES+=$(SOURCES_DIR)/mgsort.c
+SOURCES+=$(SOURCES_DIR)/ctsort.c
 
 # Algorithms
 SOURCES+=$(SOURCES_DIR)/issort.c

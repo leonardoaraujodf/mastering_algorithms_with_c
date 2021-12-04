@@ -59,4 +59,18 @@ int qksort(void *data, int size, int esize, int i, int k, int (*compare)(const v
  */
 int mgsort(void *data, int size, int esize, int i, int k, int (*compare)(const void *key1, const void *key2));
 
+
+/**
+ * @brief Uses couting sort to sort the array of int elements in data.
+ * Complexity: O(n + k), where n is the number of integer elements to be sorted and k is the maximum
+ * integer in data.
+ *
+ * @param[in] data The data to be sorted. When ctsort returns, data contains the sorted integers.
+ * @param[in] size The number of elements in data.
+ * @param[in] k The maximum integer in data, plus 1 (Attention!).
+ *
+ * @return Returns 0 if sorting is successful, or –1 otherwise.
+ */
+int ctsort(int * data, int size, int k);
+
 #endif
